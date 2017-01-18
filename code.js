@@ -38,22 +38,19 @@ var coverBands = [
 
 function countCoverBands(arrayOfCoverBands) { // function with array for parameter
       var resultsObj = {}; //Create an object to contain results
-      for (var i = 0; i < arrayOfCoverBands.length; i++) { //for loop - loops through object / array
+      for (var i = 0; i < arrayOfCoverBands.length; i++) { //for loop - loops through object / array, checks length, adds to it.
           var bandName = arrayOfCoverBands[i].covering; //adds the item check result to a variable
+
           if(resultsObj.hasOwnProperty(bandName)) { //if the value of the key checked is true
-            resultsObj[bandName];
+            resultsObj[bandName]++;//add another to it
+          } else {
+            resultsObj[bandName] = 1; // if it doesn't exist, add it to the results.
           }
-
       }
-      /* if(coverBands[i].covering exists in resultsObj) {
-            add one to count
-    } else {
-
-  }
-
-
-      */
+      return resultsObj;
 }
+
+countCoverBands(coverBands);
 
 
 var exampleBand {
