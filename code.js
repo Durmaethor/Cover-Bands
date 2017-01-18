@@ -38,9 +38,9 @@ var coverBands = [
 
 function countCoverBands(arrayOfCoverBands) { // function with array for parameter
       var resultsObj = {}; //Create an object to contain results
-      for (var i = 0; i < arrayOfCoverBands.length; i++) {
-          var bandName = arrayOfCoverBands[i].covering;
-          if(resultsObj.hasOwnProperty(bandName)) {
+      for (var i = 0; i < arrayOfCoverBands.length; i++) { //for loop - loops through object / array
+          var bandName = arrayOfCoverBands[i].covering; //adds the item check result to a variable
+          if(resultsObj.hasOwnProperty(bandName)) { //if the value of the key checked is true
             resultsObj[bandName];
           }
 
